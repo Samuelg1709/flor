@@ -5,7 +5,7 @@ import math
 tracer(2)
 h = 0
 bgcolor('black')
-pensize(30)
+pensize(10)
 
 penup()
 goto(0, -300)
@@ -19,18 +19,18 @@ color('yellow')
 for i in range(195):
     h += 0.006
     lt(179)
-    backward(i*0.2)
-    circle(i*0.4, 120)
+    backward(i*0.1)
+    circle(i*0.2, 120)
     rt(14)
-    forward(i*0.2)
-    circle(i*0.4, 120)
+    forward(i*0.1)
+    circle(i*0.2, 120)
 
 turtle.shape('turtle')
 turtle.pencolor('orangered')
 turtle.fillcolor('orange')
 phi = 137.508 * (math.pi / 180.0)
 for i in range(300):
-    r = 5 * math.sqrt(i)
+    r = 4 * math.sqrt(i)
     theta = i * phi
     x = r * math.cos(theta)
     y = r * math.sin(theta)
@@ -40,8 +40,10 @@ for i in range(300):
     turtle.pendown()
     turtle.stamp()
 
+
 turtle.penup()
-turtle.goto(0, -350)  # Ajusta la coordenada y según sea necesario
-turtle.write("Patrón de Filotaxis", align="center", font=("Arial", 20, "bold"))
+turtle.goto(0, -350)  
+turtle.color("white")
+turtle.write("Dicen que las flores amarillas son para prometer amor eterno, entonces recordé que quiero estar contigo siempre <3", align="center", font=("Comic Sans MS", 15, "bold"))
 
 done()
